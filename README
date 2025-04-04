@@ -1,0 +1,12 @@
+TRON API SEARCH
+
+для запуска приложения необходимо запустить миграции
+
+alembic revision --autogenerate
+alembic upgrade head
+
+
+В будущем добавить
+кэширование через redis
+Добавить Ci\Cd
+В тестах сделать изолированную бд

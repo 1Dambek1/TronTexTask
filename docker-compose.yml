@@ -11,10 +11,6 @@ services:
       - .env
     ports:
       - 8000:8000
-    command: >
-      sh -c "alembic revision --autogenerate &&
-             alembic upgrade head &&
-             gunicorn src.app:app --workers 1 --worker-class uvicorn.workers.UvicornWorker --bind=0.0.0.0:8000"
 
   db:
     image: postgres
@@ -31,3 +27,12 @@ services:
     container_name: redis
     ports:
       - 6379:6379
+
+  # pytest:
+  #   image: python:3.11-slim
+  #   container_name: pytest_container
+  #   depends_on:
+  #     - db
+  #     - app
+  #   working_dir: /app
+  #   command: ["pytest", "-v"]
