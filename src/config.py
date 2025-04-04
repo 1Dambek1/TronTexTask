@@ -5,8 +5,8 @@ from pydantic_settings import BaseSettings
 BASE_DIR  = Path(__file__).parent.parent
 
 class EnvData(BaseSettings):
-    DB_URl:str
-    DB_URl_ASYNC:str
+    DB_URL:str
+    DB_URL_ASYNC:str
 
 class TronSetUp(BaseSettings):
 
