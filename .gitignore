@@ -1,0 +1,5 @@
+db_data
+.env
+__pycache__
+venv
+docker
